@@ -1,0 +1,24 @@
+div.container-sm {
+    margin-top: 2%;
+}
+
+div.ESL{
+    /* border: 2px solid black; */
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+div.imgCol {
+    padding-right: 0%;
+}
+
+div.PopBlog{
+    background-color: whitesmoke;
+    border-radius: 5px;
+    padding: 0%;
+}
+
+/* The below settings define the primary border color for the entire webpage*/
+.border-primary {
+    border-color: rgb(108, 12, 44) !important;
+}
