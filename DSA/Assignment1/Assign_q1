@@ -3,9 +3,9 @@
 
  Create an Array to perform following operations:
  	- Insert element
-	- Remove element
+	- Delete element
 	- Search element
-	- Sort Array
-	- Update element
+	- Display Array
+	- Exit
 
 Make a menu driven program for the same.
