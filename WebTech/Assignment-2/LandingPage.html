@@ -1,5 +1,12 @@
 <html>
     <body>
+        <script>
+            function AddSkill(){
+                const skill = document.getElementById("skillInput");
+                const skillElement = skill.value;
+                document.getElementById("skillField").innerHTML=skillElement
+            }
+        </script>
         <header>
             <div class="mb-3">
                 <label for="SkillSet" class="form-label">Skills</label>
@@ -17,12 +24,15 @@
                     class="btn btn-primary"
                     type="button"
                     value="Add"
+                    onclick="AddSkill()"
                 />
             </div>
         </header>
         <main>
             <div style="border: 3px solid salmon; border-radius: 3px; margin-top: 2%;">
-                <h1> Filler text </h1>
+                <p id="skillField">
+                    <img class="cross img-fluid" src="red-cross-mark-icon-vector-42639024.avif">
+                </p>
             </div>
         </main>
     </body>
