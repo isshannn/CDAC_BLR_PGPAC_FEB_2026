@@ -3,3 +3,14 @@ button.cross{
     color: red;
     font-size: medium;
 }
+
+div.tag{
+    background-color: black;
+    color: red;
+    width: fit-content;
+}
+
+div.tag-box{
+    border : 2px solid salmon;
+    border-radius : 5px;
+}
