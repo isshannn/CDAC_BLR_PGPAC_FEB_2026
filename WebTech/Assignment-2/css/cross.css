@@ -1,3 +1,5 @@
-img.cross{
-    visibility: hidden;
+button.cross{
+    background-color: black;
+    color: red;
+    font-size: medium;
 }

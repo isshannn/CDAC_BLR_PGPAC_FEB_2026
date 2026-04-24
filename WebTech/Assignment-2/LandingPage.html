@@ -1,4 +1,5 @@
 <html>
+    <link rel="stylesheet" href="css/cross.css">
     <body>
         <header>
             <div class="mb-3">
@@ -32,10 +33,10 @@
         function renderTags(){
             skillContainer.innerHTML = '';
 
-            skillSet.forEach((skilSet,index) => {
+            skillSet.forEach((element,index) => {
                 const tag = document.createElement('div');
                 tag.className='tag'
-                tag.innerHTML='${skilSet} <span class="delete-btn" onClick="removeSkill(${index})"></span>';
+                tag.innerHTML=`${element} <span> <button class="cross" onclick="removeSkill(${index})"> X </button></span>`;
                 skillContainer.appendChild(tag);
             });
         }
@@ -46,6 +47,12 @@
             skillSet.push(skillElement);
             renderTags();
             // document.getElementById("skillField").innerHTML=skillElement
+        }
+
+        // Function to delete skill
+        function removeSkill(index) {
+            skillSet.splice(index, 1); // Remove from array
+            renderTags(); // Re-render
         }
         </script>
     </body>
