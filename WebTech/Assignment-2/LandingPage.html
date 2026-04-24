@@ -1,39 +1,52 @@
 <html>
     <body>
-        <script>
-            function AddSkill(){
-                const skill = document.getElementById("skillInput");
-                const skillElement = skill.value;
-                document.getElementById("skillField").innerHTML=skillElement
-            }
-        </script>
         <header>
             <div class="mb-3">
                 <label for="SkillSet" class="form-label">Skills</label>
                 <input
-                    type="text"
-                    class="form-control"
-                    name="skillInput"
-                    id="skillInput"
-                    aria-describedby="helpId"
-                    placeholder="Enter skills"
+                type="text"
+                class="form-control"
+                name="skillInput"
+                id="skillInput"
+                aria-describedby="helpId"
+                placeholder="Enter skills"
                 />
                 <input
-                    name="ButtonSubmit"
-                    id="ButtonSubmit"
-                    class="btn btn-primary"
-                    type="button"
-                    value="Add"
-                    onclick="AddSkill()"
+                name="ButtonSubmit"
+                id="ButtonSubmit"
+                class="btn btn-primary"
+                type="button"
+                value="Add"
+                onclick="AddSkill()"
                 />
             </div>
         </header>
         <main>
-            <div style="border: 3px solid salmon; border-radius: 3px; margin-top: 2%;">
-                <p id="skillField">
-                    <img class="cross img-fluid" src="red-cross-mark-icon-vector-42639024.avif">
-                </p>
+            <div id="skillField" class="tag-box">
             </div>
         </main>
+    <script>
+        let skillSet = [];
+        const skillContainer = document.getElementById('skillField');
+        
+        function renderTags(){
+            skillContainer.innerHTML = '';
+
+            skillSet.forEach((skilSet,index) => {
+                const tag = document.createElement('div');
+                tag.className='tag'
+                tag.innerHTML='${skilSet} <span class="delete-btn" onClick="removeSkill(${index})"></span>';
+                skillContainer.appendChild(tag);
+            });
+        }
+
+        function AddSkill(){
+            const skill = document.getElementById("skillInput");
+            const skillElement = skill.value;
+            skillSet.push(skillElement);
+            renderTags();
+            // document.getElementById("skillField").innerHTML=skillElement
+        }
+        </script>
     </body>
 </html>
