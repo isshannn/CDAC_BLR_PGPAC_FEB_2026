@@ -18,9 +18,9 @@
 
     <body>
         <header>
-            <div class="container">
+            <div class="container mt-4">
                 <div
-                    class="row justify-content-center align-items-center g-2"
+                    class="row justify-content-center align-items-center g-3"
                 >
                     <div class="col-sm-4" style="width: fit-content">
                         <label>Skills</label>
@@ -35,7 +35,7 @@
                             placeholder="Enter skills"
                         />
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4" style="width: fit-content">
                         <input
                             name="ButtonSubmit"
                             id="ButtonSubmit"
@@ -49,7 +49,7 @@
             </div>
         </header>
         <main>
-            <div id="skillField" class="tag-box ms-auto me-auto">
+            <div id="skillField" class="tag-box mt-5 ms-5 me-5 flex-row flex-wrap gap-2">
             </div>
         </main>
         <!-- Bootstrap JavaScript Bundle (includes Popper) -->
@@ -67,7 +67,7 @@
 
                 skillSet.forEach((element,index) => {
                     const tag = document.createElement('div');
-                    tag.className='tag'
+                    tag.className='tag';
                     tag.innerHTML=`${element} <span> <button class="cross" onclick="removeSkill(${index})"> X </button></span>`;
                     skillContainer.appendChild(tag);
                 });

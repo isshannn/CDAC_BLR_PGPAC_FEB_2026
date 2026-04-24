@@ -6,11 +6,17 @@ button.cross{
 
 div.tag{
     background-color: black;
-    color: red;
+    color: yellow;
+    border: 3px solid black;
+    border-radius: 5px;
     width: fit-content;
+    margin: 1%;
+    display: inline-flex;
+    align-items: center ;
 }
 
 div.tag-box{
-    border : 2px solid salmon;
+    border : 4px solid salmon;
     border-radius : 5px;
+    min-height: 150px;
 }
