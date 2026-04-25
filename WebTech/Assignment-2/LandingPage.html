@@ -61,6 +61,13 @@
         <script>
             let skillSet = [];
             const skillContainer = document.getElementById('skillField');
+            const skill = document.getElementById("skillInput");
+            skill.addEventListener('keypress', function(event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault(); // Prevent form submission
+                    AddSkill(); // Call the function to add skill
+                }
+            });
             
             function renderTags(){
                 skillContainer.innerHTML = '';
@@ -76,7 +83,14 @@
             function AddSkill(){
                 const skill = document.getElementById("skillInput");
                 const skillElement = skill.value;
+                if(skillElement.trim() === '') return; // Prevent adding empty skills
+                if(skillSet.includes(skillElement)) {
+                    alert('Skill already exists!');
+                    return; // Prevent duplicates
+                }
                 skillSet.push(skillElement);
+                skill.value = ''; // Clear input
+                skill.focus(); // Focus back on input
                 renderTags();
                 // document.getElementById("skillField").innerHTML=skillElement
             }
