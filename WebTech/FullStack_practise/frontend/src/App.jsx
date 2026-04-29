@@ -1,4 +1,4 @@
-// App.js
+// App.jsx
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -12,8 +12,9 @@ function App() {
     ExpiryDate: '',
     StockCount: ''
   });
+  // New state to track if we are editing an existing product
+  const [editingId, setEditingId] = useState(null); 
 
-  // Fetch products when the component loads
   useEffect(() => {
     fetchProducts();
   }, []);
@@ -27,7 +28,6 @@ function App() {
     }
   };
 
-  // Handle input changes in the form
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
@@ -35,23 +35,43 @@ function App() {
     });
   };
 
-  // CREATE: Add a new product
+  // Populate form with existing product data when Edit is clicked
+  const handleEdit = (product) => {
+    setEditingId(product._id);
+    setFormData({
+      ProductName: product.ProductName,
+      Cost: product.Cost,
+      // Format date correctly for the HTML date input field 
+      ExpiryDate: product.ExpiryDate ? product.ExpiryDate.split('T')[0] : '',
+      StockCount: product.StockCount
+    });
+  };
+
+  // Handle both CREATE and UPDATE operations
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post(API_URL, formData);
-      setFormData({ ProductName: '', Cost: '', ExpiryDate: '', StockCount: '' }); // Reset form
-      fetchProducts(); // Refresh the list
+      if (editingId) {
+        // UPDATE: Send a PUT request if we are editing an existing item
+        await axios.put(`${API_URL}/${editingId}`, formData);
+        setEditingId(null); // Reset the editing state
+      } else {
+        // CREATE: Send a POST request if it's a completely new product
+        await axios.post(API_URL, formData);
+      }
+      
+      // Reset form and refresh the product list
+      setFormData({ ProductName: '', Cost: '', ExpiryDate: '', StockCount: '' });
+      fetchProducts(); 
     } catch (error) {
-      console.error('Error adding product:', error);
+      console.error('Error saving product:', error);
     }
   };
 
-  // DELETE: Remove a product
   const handleDelete = async (id) => {
     try {
       await axios.delete(`${API_URL}/${id}`);
-      fetchProducts(); // Refresh the list
+      fetchProducts();
     } catch (error) {
       console.error('Error deleting product:', error);
     }
@@ -61,7 +81,7 @@ function App() {
     <div style={{ padding: '20px', fontFamily: 'sans-serif' }}>
       <h1>Product Management System</h1>
 
-      {/* CREATE FORM */}
+      {/* CREATE / UPDATE FORM */}
       <form onSubmit={handleSubmit} style={{ marginBottom: '30px', display: 'flex', gap: '10px' }}>
         <input 
           type="text" name="ProductName" placeholder="Product Name" 
@@ -79,7 +99,21 @@ function App() {
           type="number" name="StockCount" placeholder="Stock Count" 
           value={formData.StockCount} onChange={handleInputChange} required 
         />
-        <button type="submit">Add Product</button>
+        {/* Dynamically change button text based on state */}
+        <button type="submit">{editingId ? 'Update Product' : 'Add Product'}</button>
+        
+        {/* Cancel button to exit edit mode easily */}
+        {editingId && (
+          <button 
+            type="button" 
+            onClick={() => {
+              setEditingId(null);
+              setFormData({ ProductName: '', Cost: '', ExpiryDate: '', StockCount: '' });
+            }}
+          >
+            Cancel
+          </button>
+        )}
       </form>
 
       {/* READ: DISPLAY PRODUCTS */}
@@ -101,6 +135,13 @@ function App() {
               <td>{product.ExpiryDate ? new Date(product.ExpiryDate).toLocaleDateString() : 'N/A'}</td>
               <td>{product.StockCount}</td>
               <td>
+                {/* NEW: Edit Button */}
+                <button 
+                  onClick={() => handleEdit(product)} 
+                  style={{ color: 'blue', marginRight: '10px' }}
+                >
+                  Edit
+                </button>
                 <button onClick={() => handleDelete(product._id)} style={{ color: 'red' }}>
                   Delete
                 </button>
