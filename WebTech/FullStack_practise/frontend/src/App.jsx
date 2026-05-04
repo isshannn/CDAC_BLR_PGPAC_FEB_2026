@@ -1,10 +1,10 @@
-// App.jsx
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const API_URL = 'http://localhost:5000/api/products';
 
 function App() {
+  // Initialize usestates
   const [products, setProducts] = useState([]);
   const [formData, setFormData] = useState({
     ProductName: '',
@@ -12,9 +12,11 @@ function App() {
     ExpiryDate: '',
     StockCount: ''
   });
+
   // New state to track if we are editing an existing product
   const [editingId, setEditingId] = useState(null); 
 
+//  Initialise useEffects
   useEffect(() => {
     fetchProducts();
   }, []);
@@ -131,7 +133,7 @@ function App() {
           {products.map((product) => (
             <tr key={product._id}>
               <td>{product.ProductName}</td>
-              <td>${product.Cost}</td>
+              <td>Rs. {product.Cost}/-</td>
               <td>{product.ExpiryDate ? new Date(product.ExpiryDate).toLocaleDateString() : 'N/A'}</td>
               <td>{product.StockCount}</td>
               <td>
