@@ -1,4 +1,6 @@
 import React,{useState,useEffect} from "react"
+import axios from 'axios';
+import e from "cors";
 
 const API_URL = 'http://localhost:5000/api/Devices'
 function App() {
@@ -65,10 +67,48 @@ function App() {
       });
    }
 
+  // Handler for submit
+  const HandleSubmit = async(e) =>{
+    e.preventDefault(); 
+    /* The preventDefault() method of the Event interface tells the user agent that the 
+    event is being explicitly handled, so its default action, such as page scrolling, link navigation, 
+    or pasting text, should not be taken */
+    try{
+      if(EditInfo){
+        // Send a PUT request to API if we are editing an item
+        await axios.put(`${API_URL},${EditInfo}`,fromData);
+        setEditInfo = null  // Refreshes the editinfo to be passed for processing
+      }
+      else
+        await axios.put(`${API_URL}`, FormData)
+      // Reset form and reset the device input fields 
+      setformData({
+        DeviceName : '',
+        DateOfPurchase : '',
+        DeviceSlNo : '',
+        StockCount : ''
+      });
+      fetchDevices();
+    }
+    catch(err){
+      console.log(`Error in frontend connectivity to backend :: ${err}`);
+    }
+  };
+
+  // Handler for deletion request
+  const handleDelete = async(id) => {
+    try{
+      await axios.delete(`${API_URL}/${id}`);
+      fetchDevices(); // Because how else do you think you will refresh the db and heance the table
+    }
+    catch(err){
+      console.log(`Error in deleteing (frontend) :: ${err}`);
+    }
+  }
 
   return  (
     <>
-
+        <h1> cdac blr device management system</h1>
     </>
   )
 }
