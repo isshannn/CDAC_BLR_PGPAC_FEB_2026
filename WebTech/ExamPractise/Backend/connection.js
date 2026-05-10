@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const connectDB = async()=> {
     try{
-        const connectDetails = await mongoose.connect("mongodb://localhost:27017/")
+        const connectDetails = await mongoose.connect("mongodb://localhost:27017/device_manager")
         console.log(`MongoDB connected on PORT ${connectDetails.connection.port} on ${connectDetails.connection.host}`);
     }
     catch(err){
