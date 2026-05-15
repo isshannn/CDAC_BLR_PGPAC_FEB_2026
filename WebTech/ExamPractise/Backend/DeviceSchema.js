@@ -5,7 +5,7 @@ const { type } = require('node:os');
 const DeviceSchema = new mongoose.Schema({
             DeviceName : { type : String},
             DateOfPurchase  : {type : Date},
-            DeviceSlNo : {type : Number},
+            DeviceSlNo : {type : String},
             StockCount : {type : Number}
             }, {timeStamp: true}
         );

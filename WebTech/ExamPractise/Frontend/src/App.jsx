@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from "react"
 import axios from 'axios';
+import './App.css'
 // import e from "cors"; (Unknown addition)
 
 const API_URL = 'http://localhost:5000/api/Devices'
@@ -87,7 +88,7 @@ function App() {
     try{
       if(EditInfo){
         // Send a PUT request to API if we are editing an item
-        await axios.put(`${API_URL}/:${EditInfo}`,formData);
+        await axios.put(`${API_URL}/${EditInfo}`,formData);
         setEditInfo(null)  // Refreshes the editinfo to be passed for processing
       }
       else
@@ -120,40 +121,41 @@ function App() {
 
   return  (
     <>
-      <h1>CDAC Device Managment System</h1>
-      <form onSubmit={HandleSubmit}>
-        <input
-          type="text"
-          name="DeviceName"
-          placeholder="Device Name"
-          value={formData.DeviceName}
-          onChange={HandleInputChange}
-          />
-        <input
-          type="date"
-          name="DateOfPurchase"
-          value={formData.DateOfPurchase}
-          onChange={HandleInputChange}
-        />
-        <input
-          type="number"
-          name="DeviceSlNo"
-          placeholder="Serial Number"
-          value={formData.DeviceSlNo}
-          onChange={HandleInputChange}
-        />
-        <input
-          type="number"
-          name="StockCount"
-          placeholder="StockCount"
-          value={formData.StockCount}
-          onChange={HandleInputChange}
-        />
-        <button type="submit">
-          {EditInfo ? 'Update Product' : 'Add Product'}
-        </button>
-         { EditInfo && 
-          <button 
+      <div className="HeadStart">
+        <h1>CDAC Device Managment System</h1>
+        <form onSubmit={HandleSubmit}>
+          <input
+            type="text"
+            name="DeviceName"
+            placeholder="Device Name"
+            value={formData.DeviceName}
+            onChange={HandleInputChange}
+            />
+          <input
+            type="date"
+            name="DateOfPurchase"
+            value={formData.DateOfPurchase}
+            onChange={HandleInputChange}
+            />
+          <input
+            type="text"
+            name="DeviceSlNo"
+            placeholder="Serial Number"
+            value={formData.DeviceSlNo}
+            onChange={HandleInputChange}
+            />
+          <input
+            type="number"
+            name="StockCount"
+            placeholder="StockCount"
+            value={formData.StockCount}
+            onChange={HandleInputChange}
+            />
+          <button type="submit">
+            {EditInfo ? 'Update Product' : 'Add Product'}
+          </button>
+          { EditInfo && 
+            <button 
             type="button"
             onClick={
               () => {
@@ -165,10 +167,10 @@ function App() {
                   StockCount : ''
                 })
               }
-              }
-          >Cancel
-        </button>}
-      </form>
+            }
+            >Cancel
+          </button>}
+        </form>
       <table>
           <thead>
             <tr>
@@ -185,7 +187,7 @@ function App() {
               <td>{Devices.DateOfPurchase ? new Date(Devices.DateOfPurchase).toLocaleDateString() : 'N/A'}</td>
               <td>{Devices.DeviceSlNo}</td>
               <td>{Devices.StockCount}</td>
-              <td>
+              <td className="buttonCell">
                 <button onClick={() => handleEdit(Devices)}>
                   Edit
                 </button>
@@ -197,6 +199,7 @@ function App() {
           ))}
         </tbody>
       </table>
+    </div>
     </>
   )
 }
