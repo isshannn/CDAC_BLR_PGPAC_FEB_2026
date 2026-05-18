@@ -1,0 +1,12 @@
+
+public class Linked_list {
+	Node head;
+	
+//	Append a Node at beginning
+	public void Append_Begining(int data) {
+		if (head == null) {
+			head = new Node(data);
+			return;
+		}
+	}
+}

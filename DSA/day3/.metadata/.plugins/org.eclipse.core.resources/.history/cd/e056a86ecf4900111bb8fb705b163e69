@@ -1,0 +1,6 @@
+
+public class Linked_List {
+	int value;
+	Linked_List next;
+	
+}
