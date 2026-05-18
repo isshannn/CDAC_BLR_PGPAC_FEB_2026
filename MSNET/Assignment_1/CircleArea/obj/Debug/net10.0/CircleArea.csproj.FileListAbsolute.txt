@@ -1,0 +1,14 @@
+D:\DAC\Assignments\.Net\CircleArea\bin\Debug\net10.0\CircleArea.exe
+D:\DAC\Assignments\.Net\CircleArea\bin\Debug\net10.0\CircleArea.deps.json
+D:\DAC\Assignments\.Net\CircleArea\bin\Debug\net10.0\CircleArea.runtimeconfig.json
+D:\DAC\Assignments\.Net\CircleArea\bin\Debug\net10.0\CircleArea.dll
+D:\DAC\Assignments\.Net\CircleArea\bin\Debug\net10.0\CircleArea.pdb
+D:\DAC\Assignments\.Net\CircleArea\obj\Debug\net10.0\CircleArea.GeneratedMSBuildEditorConfig.editorconfig
+D:\DAC\Assignments\.Net\CircleArea\obj\Debug\net10.0\CircleArea.AssemblyInfoInputs.cache
+D:\DAC\Assignments\.Net\CircleArea\obj\Debug\net10.0\CircleArea.AssemblyInfo.cs
+D:\DAC\Assignments\.Net\CircleArea\obj\Debug\net10.0\CircleArea.csproj.CoreCompileInputs.cache
+D:\DAC\Assignments\.Net\CircleArea\obj\Debug\net10.0\CircleArea.dll
+D:\DAC\Assignments\.Net\CircleArea\obj\Debug\net10.0\refint\CircleArea.dll
+D:\DAC\Assignments\.Net\CircleArea\obj\Debug\net10.0\CircleArea.pdb
+D:\DAC\Assignments\.Net\CircleArea\obj\Debug\net10.0\CircleArea.genruntimeconfig.cache
+D:\DAC\Assignments\.Net\CircleArea\obj\Debug\net10.0\ref\CircleArea.dll

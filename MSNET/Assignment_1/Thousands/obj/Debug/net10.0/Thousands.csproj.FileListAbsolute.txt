@@ -1,0 +1,14 @@
+D:\DAC\Assignments\.Net\Thousands\obj\Debug\net10.0\Thousands.GeneratedMSBuildEditorConfig.editorconfig
+D:\DAC\Assignments\.Net\Thousands\obj\Debug\net10.0\Thousands.AssemblyInfoInputs.cache
+D:\DAC\Assignments\.Net\Thousands\obj\Debug\net10.0\Thousands.AssemblyInfo.cs
+D:\DAC\Assignments\.Net\Thousands\obj\Debug\net10.0\Thousands.csproj.CoreCompileInputs.cache
+D:\DAC\Assignments\.Net\Thousands\bin\Debug\net10.0\Thousands.exe
+D:\DAC\Assignments\.Net\Thousands\bin\Debug\net10.0\Thousands.deps.json
+D:\DAC\Assignments\.Net\Thousands\bin\Debug\net10.0\Thousands.runtimeconfig.json
+D:\DAC\Assignments\.Net\Thousands\bin\Debug\net10.0\Thousands.dll
+D:\DAC\Assignments\.Net\Thousands\bin\Debug\net10.0\Thousands.pdb
+D:\DAC\Assignments\.Net\Thousands\obj\Debug\net10.0\Thousands.dll
+D:\DAC\Assignments\.Net\Thousands\obj\Debug\net10.0\refint\Thousands.dll
+D:\DAC\Assignments\.Net\Thousands\obj\Debug\net10.0\Thousands.pdb
+D:\DAC\Assignments\.Net\Thousands\obj\Debug\net10.0\Thousands.genruntimeconfig.cache
+D:\DAC\Assignments\.Net\Thousands\obj\Debug\net10.0\ref\Thousands.dll

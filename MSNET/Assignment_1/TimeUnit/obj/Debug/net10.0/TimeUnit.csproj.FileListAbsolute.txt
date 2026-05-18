@@ -1,0 +1,14 @@
+D:\DAC\Assignments\.Net\TimeUnit\bin\Debug\net10.0\TimeUnit.exe
+D:\DAC\Assignments\.Net\TimeUnit\bin\Debug\net10.0\TimeUnit.deps.json
+D:\DAC\Assignments\.Net\TimeUnit\bin\Debug\net10.0\TimeUnit.runtimeconfig.json
+D:\DAC\Assignments\.Net\TimeUnit\bin\Debug\net10.0\TimeUnit.dll
+D:\DAC\Assignments\.Net\TimeUnit\bin\Debug\net10.0\TimeUnit.pdb
+D:\DAC\Assignments\.Net\TimeUnit\obj\Debug\net10.0\TimeUnit.GeneratedMSBuildEditorConfig.editorconfig
+D:\DAC\Assignments\.Net\TimeUnit\obj\Debug\net10.0\TimeUnit.AssemblyInfoInputs.cache
+D:\DAC\Assignments\.Net\TimeUnit\obj\Debug\net10.0\TimeUnit.AssemblyInfo.cs
+D:\DAC\Assignments\.Net\TimeUnit\obj\Debug\net10.0\TimeUnit.csproj.CoreCompileInputs.cache
+D:\DAC\Assignments\.Net\TimeUnit\obj\Debug\net10.0\TimeUnit.dll
+D:\DAC\Assignments\.Net\TimeUnit\obj\Debug\net10.0\refint\TimeUnit.dll
+D:\DAC\Assignments\.Net\TimeUnit\obj\Debug\net10.0\TimeUnit.pdb
+D:\DAC\Assignments\.Net\TimeUnit\obj\Debug\net10.0\TimeUnit.genruntimeconfig.cache
+D:\DAC\Assignments\.Net\TimeUnit\obj\Debug\net10.0\ref\TimeUnit.dll

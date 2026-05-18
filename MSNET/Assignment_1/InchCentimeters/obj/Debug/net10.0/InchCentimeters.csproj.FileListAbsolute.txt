@@ -1,0 +1,14 @@
+D:\DAC\Assignments\.Net\InchCentimeters\bin\Debug\net10.0\InchCentimeters.exe
+D:\DAC\Assignments\.Net\InchCentimeters\bin\Debug\net10.0\InchCentimeters.deps.json
+D:\DAC\Assignments\.Net\InchCentimeters\bin\Debug\net10.0\InchCentimeters.runtimeconfig.json
+D:\DAC\Assignments\.Net\InchCentimeters\bin\Debug\net10.0\InchCentimeters.dll
+D:\DAC\Assignments\.Net\InchCentimeters\bin\Debug\net10.0\InchCentimeters.pdb
+D:\DAC\Assignments\.Net\InchCentimeters\obj\Debug\net10.0\InchCentimeters.GeneratedMSBuildEditorConfig.editorconfig
+D:\DAC\Assignments\.Net\InchCentimeters\obj\Debug\net10.0\InchCentimeters.AssemblyInfoInputs.cache
+D:\DAC\Assignments\.Net\InchCentimeters\obj\Debug\net10.0\InchCentimeters.AssemblyInfo.cs
+D:\DAC\Assignments\.Net\InchCentimeters\obj\Debug\net10.0\InchCentimeters.csproj.CoreCompileInputs.cache
+D:\DAC\Assignments\.Net\InchCentimeters\obj\Debug\net10.0\InchCentimeters.dll
+D:\DAC\Assignments\.Net\InchCentimeters\obj\Debug\net10.0\refint\InchCentimeters.dll
+D:\DAC\Assignments\.Net\InchCentimeters\obj\Debug\net10.0\InchCentimeters.pdb
+D:\DAC\Assignments\.Net\InchCentimeters\obj\Debug\net10.0\InchCentimeters.genruntimeconfig.cache
+D:\DAC\Assignments\.Net\InchCentimeters\obj\Debug\net10.0\ref\InchCentimeters.dll
