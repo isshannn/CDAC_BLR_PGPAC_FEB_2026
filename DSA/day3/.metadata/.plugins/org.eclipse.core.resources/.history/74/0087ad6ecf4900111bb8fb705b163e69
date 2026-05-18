@@ -1,0 +1,6 @@
+
+public class Linked_List {
+	int value;
+	Node next;
+	
+}
