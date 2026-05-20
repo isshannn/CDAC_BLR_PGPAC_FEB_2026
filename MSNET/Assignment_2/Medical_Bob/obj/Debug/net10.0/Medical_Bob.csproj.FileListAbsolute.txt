@@ -1,0 +1,15 @@
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\Medical_Bob\bin\Debug\net10.0\Medical_Bob.exe
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\Medical_Bob\bin\Debug\net10.0\Medical_Bob.deps.json
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\Medical_Bob\bin\Debug\net10.0\Medical_Bob.runtimeconfig.json
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\Medical_Bob\bin\Debug\net10.0\Medical_Bob.dll
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\Medical_Bob\bin\Debug\net10.0\Medical_Bob.pdb
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\Medical_Bob\obj\Debug\net10.0\Medical_Bob.GeneratedMSBuildEditorConfig.editorconfig
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\Medical_Bob\obj\Debug\net10.0\Medical_Bob.AssemblyInfoInputs.cache
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\Medical_Bob\obj\Debug\net10.0\Medical_Bob.AssemblyInfo.cs
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\Medical_Bob\obj\Debug\net10.0\Medical_Bob.csproj.CoreCompileInputs.cache
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\Medical_Bob\obj\Debug\net10.0\Medical_Bob.sourcelink.json
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\Medical_Bob\obj\Debug\net10.0\Medical_Bob.dll
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\Medical_Bob\obj\Debug\net10.0\refint\Medical_Bob.dll
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\Medical_Bob\obj\Debug\net10.0\Medical_Bob.pdb
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\Medical_Bob\obj\Debug\net10.0\Medical_Bob.genruntimeconfig.cache
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\Medical_Bob\obj\Debug\net10.0\ref\Medical_Bob.dll

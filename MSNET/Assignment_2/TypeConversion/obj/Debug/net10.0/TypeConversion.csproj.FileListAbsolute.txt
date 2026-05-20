@@ -1,0 +1,15 @@
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\TypeConversion\bin\Debug\net10.0\TypeConversion.exe
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\TypeConversion\bin\Debug\net10.0\TypeConversion.deps.json
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\TypeConversion\bin\Debug\net10.0\TypeConversion.runtimeconfig.json
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\TypeConversion\bin\Debug\net10.0\TypeConversion.dll
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\TypeConversion\bin\Debug\net10.0\TypeConversion.pdb
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\TypeConversion\obj\Debug\net10.0\TypeConversion.GeneratedMSBuildEditorConfig.editorconfig
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\TypeConversion\obj\Debug\net10.0\TypeConversion.AssemblyInfoInputs.cache
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\TypeConversion\obj\Debug\net10.0\TypeConversion.AssemblyInfo.cs
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\TypeConversion\obj\Debug\net10.0\TypeConversion.csproj.CoreCompileInputs.cache
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\TypeConversion\obj\Debug\net10.0\TypeConversion.sourcelink.json
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\TypeConversion\obj\Debug\net10.0\TypeConversion.dll
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\TypeConversion\obj\Debug\net10.0\refint\TypeConversion.dll
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\TypeConversion\obj\Debug\net10.0\TypeConversion.pdb
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\TypeConversion\obj\Debug\net10.0\TypeConversion.genruntimeconfig.cache
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_2\TypeConversion\obj\Debug\net10.0\ref\TypeConversion.dll
