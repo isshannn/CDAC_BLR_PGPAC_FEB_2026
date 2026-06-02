@@ -1,0 +1,15 @@
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\InterfaceCollection\bin\Debug\net10.0\InterfaceCollection.exe
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\InterfaceCollection\bin\Debug\net10.0\InterfaceCollection.deps.json
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\InterfaceCollection\bin\Debug\net10.0\InterfaceCollection.runtimeconfig.json
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\InterfaceCollection\bin\Debug\net10.0\InterfaceCollection.dll
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\InterfaceCollection\bin\Debug\net10.0\InterfaceCollection.pdb
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\InterfaceCollection\obj\Debug\net10.0\InterfaceCollection.GeneratedMSBuildEditorConfig.editorconfig
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\InterfaceCollection\obj\Debug\net10.0\InterfaceCollection.AssemblyInfoInputs.cache
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\InterfaceCollection\obj\Debug\net10.0\InterfaceCollection.AssemblyInfo.cs
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\InterfaceCollection\obj\Debug\net10.0\InterfaceCollection.csproj.CoreCompileInputs.cache
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\InterfaceCollection\obj\Debug\net10.0\InterfaceCollection.sourcelink.json
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\InterfaceCollection\obj\Debug\net10.0\InterfaceCollection.dll
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\InterfaceCollection\obj\Debug\net10.0\refint\InterfaceCollection.dll
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\InterfaceCollection\obj\Debug\net10.0\InterfaceCollection.pdb
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\InterfaceCollection\obj\Debug\net10.0\InterfaceCollection.genruntimeconfig.cache
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\InterfaceCollection\obj\Debug\net10.0\ref\InterfaceCollection.dll

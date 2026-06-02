@@ -1,0 +1,15 @@
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\LargeNum\bin\Debug\net10.0\LargeNum.exe
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\LargeNum\bin\Debug\net10.0\LargeNum.deps.json
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\LargeNum\bin\Debug\net10.0\LargeNum.runtimeconfig.json
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\LargeNum\bin\Debug\net10.0\LargeNum.dll
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\LargeNum\bin\Debug\net10.0\LargeNum.pdb
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\LargeNum\obj\Debug\net10.0\LargeNum.GeneratedMSBuildEditorConfig.editorconfig
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\LargeNum\obj\Debug\net10.0\LargeNum.AssemblyInfoInputs.cache
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\LargeNum\obj\Debug\net10.0\LargeNum.AssemblyInfo.cs
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\LargeNum\obj\Debug\net10.0\LargeNum.csproj.CoreCompileInputs.cache
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\LargeNum\obj\Debug\net10.0\LargeNum.sourcelink.json
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\LargeNum\obj\Debug\net10.0\LargeNum.dll
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\LargeNum\obj\Debug\net10.0\refint\LargeNum.dll
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\LargeNum\obj\Debug\net10.0\LargeNum.pdb
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\LargeNum\obj\Debug\net10.0\LargeNum.genruntimeconfig.cache
+D:\DAC\CDAC_BLR_PGPAC_FEB_2026\MSNET\Assignment_4\LargeNum\obj\Debug\net10.0\ref\LargeNum.dll

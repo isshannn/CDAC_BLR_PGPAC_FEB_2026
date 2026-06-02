@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\DAC\\CDAC_BLR_PGPAC_FEB_2026\\MSNET\\Assignment_4\\InterfaceCollection\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9C397CA6-BE48-4010-B45A-635A3D8D9FF6}|InterfaceCollection.csproj|d:\\dac\\cdac_blr_pgpac_feb_2026\\msnet\\assignment_4\\interfacecollection\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C397CA6-BE48-4010-B45A-635A3D8D9FF6}|InterfaceCollection.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DAC\\CDAC_BLR_PGPAC_FEB_2026\\MSNET\\Assignment_4\\InterfaceCollection\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\DAC\\CDAC_BLR_PGPAC_FEB_2026\\MSNET\\Assignment_4\\InterfaceCollection\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAkwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-22T06:30:09.691Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

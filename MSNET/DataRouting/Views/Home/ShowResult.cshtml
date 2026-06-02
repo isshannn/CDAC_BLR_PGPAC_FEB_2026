@@ -1,0 +1,23 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    <center>
+        <h4>Student Name: @ViewBag.Stud_name</h4>
+        <h4>Roll Num: @ViewBag.Stud_roll</h4>
+        <h4>Marks: @ViewBag.Stud_marks</h4>
+        @{
+            int i = @ViewBag.Stud_marks;
+            if (i < 40)
+            {
+                <h3 color="red">FAIL</h3>
+                
+            }
+            else
+            {
+                <h3 color="green">PASS</h3>
+            }
+            
+        }
+    </center>
+}

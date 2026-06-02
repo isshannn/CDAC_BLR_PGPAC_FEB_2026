@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\DAC\\CDAC_BLR_PGPAC_FEB_2026\\MSNET\\HandsOn_1\\First\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDD81F0-46B8-7AD3-F217-7136BDEB8C6B}|First.csproj|d:\\dac\\cdac_blr_pgpac_feb_2026\\msnet\\handson_1\\first\\views\\home\\lullaview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CEDD81F0-46B8-7AD3-F217-7136BDEB8C6B}|First.csproj|solutionrelative:views\\home\\lullaview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDD81F0-46B8-7AD3-F217-7136BDEB8C6B}|First.csproj|d:\\dac\\cdac_blr_pgpac_feb_2026\\msnet\\handson_1\\first\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDD81F0-46B8-7AD3-F217-7136BDEB8C6B}|First.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDD81F0-46B8-7AD3-F217-7136BDEB8C6B}|First.csproj|d:\\dac\\cdac_blr_pgpac_feb_2026\\msnet\\handson_1\\first\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{CEDD81F0-46B8-7AD3-F217-7136BDEB8C6B}|First.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{CEDD81F0-46B8-7AD3-F217-7136BDEB8C6B}|First.csproj|d:\\dac\\cdac_blr_pgpac_feb_2026\\msnet\\handson_1\\first\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CEDD81F0-46B8-7AD3-F217-7136BDEB8C6B}|First.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LullaView.cshtml",
+              "DocumentMoniker": "D:\\DAC\\CDAC_BLR_PGPAC_FEB_2026\\MSNET\\HandsOn_1\\First\\Views\\Home\\LullaView.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\LullaView.cshtml",
+              "ToolTip": "D:\\DAC\\CDAC_BLR_PGPAC_FEB_2026\\MSNET\\HandsOn_1\\First\\Views\\Home\\LullaView.cshtml",
+              "RelativeToolTip": "Views\\Home\\LullaView.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-25T11:37:24.25Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\DAC\\CDAC_BLR_PGPAC_FEB_2026\\MSNET\\HandsOn_1\\First\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\DAC\\CDAC_BLR_PGPAC_FEB_2026\\MSNET\\HandsOn_1\\First\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-25T11:34:09.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\DAC\\CDAC_BLR_PGPAC_FEB_2026\\MSNET\\HandsOn_1\\First\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\DAC\\CDAC_BLR_PGPAC_FEB_2026\\MSNET\\HandsOn_1\\First\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T11:33:20.472Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\DAC\\CDAC_BLR_PGPAC_FEB_2026\\MSNET\\HandsOn_1\\First\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "D:\\DAC\\CDAC_BLR_PGPAC_FEB_2026\\MSNET\\HandsOn_1\\First\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-25T11:16:29.928Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
