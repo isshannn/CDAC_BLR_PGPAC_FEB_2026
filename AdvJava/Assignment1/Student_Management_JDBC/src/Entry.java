@@ -20,8 +20,23 @@ public class Entry {
 			switch(ch) {
 				case 1: con_obj.InsertRecord();
 						break;
-				case 2: 
+						
+				case 2: con_obj.UpdateRecord();
+						break;
+						
+				case 3: con_obj.DeleteRecord();
+						break;
+						
+				case 4: con_obj.DisplayRecord();
+						break;
+						
+				case 5: con_obj.SearchbyID();
+						break;
+						
 				case 6: System.exit(0);
+						
+				default: System.out.println("Not configured");
+						 break;
 			}
 		}
 	}
