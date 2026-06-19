@@ -1,0 +1,473 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2865
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\froman\fcharset0 Times-Bold;\f2\fmodern\fcharset0 Courier;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red109\green109\blue109;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c50196\c50196\c50196;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh18000\viewkind0
+\deftab720
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Yes. For a 
+\f1\b CallableStatement version of the Library Book Management System
+\f0\b0 , you will:\
+\uc0\u9989  Create procedures in MySQL first\u8232 \u9989  Use 
+\f2\fs26 CallableStatement
+\f0\fs24  in Java\uc0\u8232 \u9989  Keep the same menu-driven structure with switch-case\
+\pard\pardeftab720\partightenfactor0
+\cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f1\b\fs48 \cf0 \strokec2 Project Structure\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs26 \cf0 \
+LibraryManagementCallable\
+\
+src\
+\uc0\u9474 \
+\uc0\u9500 \u9472 \u9472  Book.java\
+\uc0\u9500 \u9472 \u9472  BookDAO.java\
+\uc0\u9492 \u9472 \u9472  Main.java\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f1\b\fs48 \cf0 \strokec2 Step 1: Create Database\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs26 \cf0 \
+create database librarydb;\
+\
+use librarydb;\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f1\b\fs48 \cf0 \strokec2 Step 2: Create Table\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs26 \cf0 \
+create table books\
+(\
+    book_id int primary key,\
+    title varchar(50),\
+    author varchar(50),\
+    category varchar(30),\
+    price double\
+);\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f1\b\fs48 \cf0 \strokec2 Step 3: Create Procedures\
+\pard\pardeftab720\sa298\partightenfactor0
+
+\fs36 \cf0 Insert Book\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs26 \cf0 \
+delimiter $$\
+\
+create procedure InsertBook\
+(\
+    in p_id int,\
+    in p_title varchar(50),\
+    in p_author varchar(50),\
+    in p_category varchar(30),\
+    in p_price double\
+)\
+begin\
+\
+    insert into books\
+    values\
+    (\
+        p_id,\
+        p_title,\
+        p_author,\
+        p_category,\
+        p_price\
+    );\
+\
+end $$\
+\
+delimiter ;\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf3 \strokec3 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f1\b\fs36 \cf0 \strokec2 Update Book Price\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs26 \cf0 \
+delimiter $$\
+\
+create procedure UpdateBookPrice\
+(\
+    in p_bookid int,\
+    in p_price double\
+)\
+begin\
+\
+    update books\
+    set price = p_price\
+    where book_id = p_bookid;\
+\
+end $$\
+\
+delimiter ;\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf3 \strokec3 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f1\b\fs36 \cf0 \strokec2 Delete Book\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs26 \cf0 \
+delimiter $$\
+\
+create procedure DeleteBook\
+(\
+    in p_bookid int\
+)\
+begin\
+\
+    delete from books\
+    where book_id = p_bookid;\
+\
+end $$\
+\
+delimiter ;\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf3 \strokec3 \
+\pard\pardeftab720\sa298\partightenfactor0
+
+\f1\b\fs36 \cf0 \strokec2 Display Books By Category\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs26 \cf0 \
+delimiter $$\
+\
+create procedure GetBooksByCategory\
+(\
+    in p_category varchar(30)\
+)\
+begin\
+\
+    select *\
+    from books\
+    where category = p_category;\
+\
+end $$\
+\
+delimiter ;\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f1\b\fs48 \cf0 \strokec2 Book.java\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs26 \cf0 \
+public class Book \{\
+\
+    private int bookId;\
+    private String title;\
+    private String author;\
+    private String category;\
+    private double price;\
+\
+    public Book() \{\}\
+\
+    public Book(int bookId,\
+                String title,\
+                String author,\
+                String category,\
+                double price) \{\
+\
+        this.bookId = bookId;\
+        this.title = title;\
+        this.author = author;\
+        this.category = category;\
+        this.price = price;\
+    \}\
+\
+    public int getBookId() \{\
+        return bookId;\
+    \}\
+\
+    public String getTitle() \{\
+        return title;\
+    \}\
+\
+    public String getAuthor() \{\
+        return author;\
+    \}\
+\
+    public String getCategory() \{\
+        return category;\
+    \}\
+\
+    public double getPrice() \{\
+        return price;\
+    \}\
+\}\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f1\b\fs48 \cf0 \strokec2 BookDAO.java\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs26 \cf0 \
+import java.sql.*;\
+\
+public class BookDAO \{\
+\
+    Connection con;\
+\
+    public BookDAO() throws Exception \{\
+\
+        Class.forName(\
+        "com.mysql.cj.jdbc.Driver");\
+\
+        con =\
+        DriverManager.getConnection(\
+        "jdbc:mysql://localhost:3306/librarydb",\
+        "root",\
+        "root");\
+    \}\
+\
+    public void insertBook(Book b)\
+    throws Exception \{\
+\
+        CallableStatement cs =\
+        con.prepareCall(\
+        "\{call InsertBook(?,?,?,?,?)\}");\
+\
+        cs.setInt(1,b.getBookId());\
+        cs.setString(2,b.getTitle());\
+        cs.setString(3,b.getAuthor());\
+        cs.setString(4,b.getCategory());\
+        cs.setDouble(5,b.getPrice());\
+\
+        cs.executeUpdate();\
+\
+        System.out.println(\
+        "Book Inserted Successfully");\
+    \}\
+\
+    public void updatePrice(\
+            int bookId,\
+            double price)\
+    throws Exception \{\
+\
+        CallableStatement cs =\
+        con.prepareCall(\
+        "\{call UpdateBookPrice(?,?)\}");\
+\
+        cs.setInt(1,bookId);\
+        cs.setDouble(2,price);\
+\
+        cs.executeUpdate();\
+\
+        System.out.println(\
+        "Price Updated");\
+    \}\
+\
+    public void deleteBook(int bookId)\
+    throws Exception \{\
+\
+        CallableStatement cs =\
+        con.prepareCall(\
+        "\{call DeleteBook(?)\}");\
+\
+        cs.setInt(1,bookId);\
+\
+        cs.executeUpdate();\
+\
+        System.out.println(\
+        "Book Deleted");\
+    \}\
+\
+    public void displayCategory(\
+            String category)\
+    throws Exception \{\
+\
+        CallableStatement cs =\
+        con.prepareCall(\
+        "\{call GetBooksByCategory(?)\}");\
+\
+        cs.setString(1,category);\
+\
+        ResultSet rs =\
+        cs.executeQuery();\
+\
+        while(rs.next()) \{\
+\
+            System.out.println(\
+            rs.getInt(1)+"  "+\
+            rs.getString(2)+"  "+\
+            rs.getString(3)+"  "+\
+            rs.getString(4)+"  "+\
+            rs.getDouble(5));\
+        \}\
+    \}\
+\}\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf3 \strokec3 \
+\pard\pardeftab720\sa321\partightenfactor0
+
+\f1\b\fs48 \cf0 \strokec2 Main.java\
+\pard\pardeftab720\partightenfactor0
+
+\f2\b0\fs26 \cf0 \
+import java.util.Scanner;\
+\
+public class Main \{\
+\
+    public static void main(String[] args)\
+    throws Exception \{\
+\
+        Scanner sc =\
+        new Scanner(System.in);\
+\
+        BookDAO dao =\
+        new BookDAO();\
+\
+        while(true) \{\
+\
+            System.out.println(\
+            "\\n===== LIBRARY MENU =====");\
+\
+            System.out.println(\
+            "1. Insert Book");\
+\
+            System.out.println(\
+            "2. Update Price");\
+\
+            System.out.println(\
+            "3. Delete Book");\
+\
+            System.out.println(\
+            "4. Display By Category");\
+\
+            System.out.println(\
+            "5. Exit");\
+\
+            System.out.print(\
+            "Enter Choice : ");\
+\
+            int ch =\
+            sc.nextInt();\
+\
+            switch(ch) \{\
+\
+                case 1:\
+\
+                    System.out.print(\
+                    "Book ID : ");\
+                    int id =\
+                    sc.nextInt();\
+\
+                    System.out.print(\
+                    "Title : ");\
+                    String title =\
+                    sc.next();\
+\
+                    System.out.print(\
+                    "Author : ");\
+                    String author =\
+                    sc.next();\
+\
+                    System.out.print(\
+                    "Category : ");\
+                    String category =\
+                    sc.next();\
+\
+                    System.out.print(\
+                    "Price : ");\
+                    double price =\
+                    sc.nextDouble();\
+\
+                    Book b =\
+                    new Book(\
+                    id,\
+                    title,\
+                    author,\
+                    category,\
+                    price);\
+\
+                    dao.insertBook(b);\
+\
+                    break;\
+\
+                case 2:\
+\
+                    System.out.print(\
+                    "Book ID : ");\
+                    id =\
+                    sc.nextInt();\
+\
+                    System.out.print(\
+                    "New Price : ");\
+                    price =\
+                    sc.nextDouble();\
+\
+                    dao.updatePrice(\
+                    id,\
+                    price);\
+\
+                    break;\
+\
+                case 3:\
+\
+                    System.out.print(\
+                    "Book ID : ");\
+                    id =\
+                    sc.nextInt();\
+\
+                    dao.deleteBook(id);\
+\
+                    break;\
+\
+                case 4:\
+\
+                    System.out.print(\
+                    "Category : ");\
+\
+                    category =\
+                    sc.next();\
+\
+                    dao.displayCategory(\
+                    category);\
+\
+                    break;\
+\
+                case 5:\
+\
+                    System.exit(0);\
+            \}\
+        \}\
+    \}\
+\}\
+\
+}

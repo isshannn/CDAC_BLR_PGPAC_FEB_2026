@@ -1,0 +1,226 @@
+LIBRARY MANAGEMENT SYSTEM USING CALLABLESTATEMENT
+
+PROJECT STRUCTURE
+
+LibraryManagementCallable │ ├── Book.java ├── BookDAO.java └── Main.java
+
+DATABASE
+
+create database librarydb; use librarydb;
+
+create table books ( book_id int primary key, title varchar(50), author
+varchar(50), category varchar(30), price double );
+
+
+
+
+PROCEDURE: InsertBook
+
+delimiter $$
+
+create procedure InsertBook ( in p_id int, in p_title varchar(50), in
+p_author varchar(50), in p_category varchar(30), in p_price double )
+begin insert into books
+values(p_id,p_title,p_author,p_category,p_price); end $$
+
+delimiter ;
+
+
+
+
+
+PROCEDURE: UpdateBookPrice
+
+delimiter $$
+
+create procedure UpdateBookPrice ( in p_bookid int, in p_price double )
+begin update books set price = p_price where book_id = p_bookid; end $$
+
+delimiter ;
+
+
+
+
+
+PROCEDURE: DeleteBook
+
+delimiter $$
+
+create procedure DeleteBook ( in p_bookid int ) begin delete from books
+where book_id = p_bookid; end $$
+
+delimiter ;
+
+
+
+
+
+
+
+PROCEDURE: GetBooksByCategory
+
+delimiter $$
+
+create procedure GetBooksByCategory ( in p_category varchar(30) ) begin
+select * from books where category = p_category; end $$
+
+delimiter ;
+
+
+
+
+
+
+
+BOOK.JAVA
+
+public class Book {
+
+    private int bookId;
+    private String title;
+    private String author;
+    private String category;
+    private double price;
+
+    public Book() {}
+
+    public Book(int bookId,String title,String author,String category,double price) {
+        this.bookId = bookId;
+        this.title = title;
+        this.author = author;
+        this.category = category;
+        this.price = price;
+    }
+
+    public int getBookId() { return bookId; }
+    public String getTitle() { return title; }
+    public String getAuthor() { return author; }
+    public String getCategory() { return category; }
+    public double getPrice() { return price; }
+
+}
+
+
+
+
+
+
+BOOKDAO.JAVA
+
+import java.sql.*;
+
+public class BookDAO {
+
+    Connection con;
+
+    public BookDAO() throws Exception {
+        Class.forName("com.mysql.cj.jdbc.Driver");
+        con = DriverManager.getConnection(
+            "jdbc:mysql://localhost:3306/librarydb",
+            "root",
+            "root");
+    }
+
+    public void insertBook(Book b) throws Exception {
+        CallableStatement cs =
+        con.prepareCall("{call InsertBook(?,?,?,?,?)}");
+
+        cs.setInt(1,b.getBookId());
+        cs.setString(2,b.getTitle());
+        cs.setString(3,b.getAuthor());
+        cs.setString(4,b.getCategory());
+        cs.setDouble(5,b.getPrice());
+
+        cs.executeUpdate();
+    }
+
+    public void updatePrice(int bookId,double price) throws Exception {
+
+        CallableStatement cs =
+        con.prepareCall("{call UpdateBookPrice(?,?)}");
+
+        cs.setInt(1,bookId);
+        cs.setDouble(2,price);
+
+        cs.executeUpdate();
+    }
+
+    public void deleteBook(int bookId) throws Exception {
+
+        CallableStatement cs =
+        con.prepareCall("{call DeleteBook(?)}");
+
+        cs.setInt(1,bookId);
+
+        cs.executeUpdate();
+    }
+
+    public void displayCategory(String category) throws Exception {
+
+        CallableStatement cs =
+        con.prepareCall("{call GetBooksByCategory(?)}");
+
+        cs.setString(1,category);
+
+        ResultSet rs = cs.executeQuery();
+
+        while(rs.next()) {
+            System.out.println(
+            rs.getInt(1)+" "+
+            rs.getString(2)+" "+
+            rs.getString(3)+" "+
+            rs.getString(4)+" "+
+            rs.getDouble(5));
+        }
+    }
+
+}
+
+
+
+
+
+
+
+MAIN.JAVA
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+
+        Scanner sc = new Scanner(System.in);
+        BookDAO dao = new BookDAO();
+
+        while(true) {
+
+            System.out.println("1 Insert Book");
+            System.out.println("2 Update Price");
+            System.out.println("3 Delete Book");
+            System.out.println("4 Display By Category");
+            System.out.println("5 Exit");
+
+            int ch = sc.nextInt();
+
+            switch(ch) {
+
+                case 1:
+                    break;
+
+                case 2:
+                    break;
+
+                case 3:
+                    break;
+
+                case 4:
+                    break;
+
+                case 5:
+                    System.exit(0);
+            }
+        }
+    }
+
+}

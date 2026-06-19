@@ -1,0 +1,333 @@
+Student Management::
+
+Database Table
+CREATE TABLE student
+(
+    sid INT PRIMARY KEY,
+    sname VARCHAR(50),
+    course VARCHAR(50)
+);
+
+
+StudentManagement
+│
+├── com.cdac.dao
+│      StudentDAO.java
+│
+├── com.cdac.model
+│      Student.java
+│
+├── com.cdac.servlet
+│      LoginServlet.java
+│      LogoutServlet.java
+│      MenuServlet.java
+│      AddStudentServlet.java
+│      ViewStudentServlet.java
+│      UpdateStudentServlet.java
+│      DeleteStudentServlet.java
+│
+├── login.html
+├── menu.html
+├── addstudent.html
+├── updatestudent.html
+├── deletestudent.html
+└── view.jsp
+
+
+
+
+
+2. StudentDAO.java (Add Update & Delete Methods)
+
+public int updateStudent(Student s)
+throws Exception
+{
+    PreparedStatement ps =
+    con.prepareStatement(
+    "update student set sname=?, course=? where sid=?");
+
+    ps.setString(1,s.getSname());
+    ps.setString(2,s.getCourse());
+    ps.setInt(3,s.getSid());
+
+    return ps.executeUpdate();
+}
+
+public int deleteStudent(int sid)
+throws Exception
+{
+    PreparedStatement ps =
+    con.prepareStatement(
+    "delete from student where sid=?");
+
+    ps.setInt(1,sid);
+
+    return ps.executeUpdate();
+}
+
+3: MenuServlet.java
+
+
+package com.cdac.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+
+@WebServlet("/menu")
+public class MenuServlet extends HttpServlet
+{
+    protected void doPost(
+            HttpServletRequest request,
+            HttpServletResponse response)
+            throws IOException
+    {
+        int choice =
+        Integer.parseInt(
+        request.getParameter("choice"));
+
+        switch(choice)
+        {
+            case 1:
+
+                response.sendRedirect(
+                "addstudent.html");
+                break;
+
+            case 2:
+
+                response.sendRedirect(
+                "view");
+                break;
+
+            case 3:
+
+                response.sendRedirect(
+                "updatestudent.html");
+                break;
+
+            case 4:
+
+                response.sendRedirect(
+                "deletestudent.html");
+                break;
+
+            case 5:
+
+                response.sendRedirect(
+                "logout");
+                break;
+
+            default:
+
+                response.getWriter().println(
+                "Invalid Choice");
+        }
+    }
+}
+
+4: UpdateStudentServlet.java:
+
+
+package com.cdac.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+
+import com.cdac.dao.StudentDAO;
+import com.cdac.model.Student;
+
+@WebServlet("/update")
+public class UpdateStudentServlet
+extends HttpServlet
+{
+    protected void doPost(
+            HttpServletRequest request,
+            HttpServletResponse response)
+            throws IOException
+    {
+        try
+        {
+            Student s =
+            new Student();
+
+            s.setSid(
+            Integer.parseInt(
+            request.getParameter("sid")));
+
+            s.setSname(
+            request.getParameter("sname"));
+
+            s.setCourse(
+            request.getParameter("course"));
+
+            StudentDAO dao =
+            new StudentDAO();
+
+            int n =
+            dao.updateStudent(s);
+
+            if(n > 0)
+            {
+                response.getWriter().println(
+                "Student Updated Successfully");
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+5. DeleteStudentServlet.java
+
+package com.cdac.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+
+import com.cdac.dao.StudentDAO;
+
+@WebServlet("/delete")
+public class DeleteStudentServlet
+extends HttpServlet
+{
+    protected void doPost(
+            HttpServletRequest request,
+            HttpServletResponse response)
+            throws IOException
+    {
+        try
+        {
+            int sid =
+            Integer.parseInt(
+            request.getParameter("sid"));
+
+            StudentDAO dao =
+            new StudentDAO();
+
+            int n =
+            dao.deleteStudent(sid);
+
+            if(n > 0)
+            {
+                response.getWriter().println(
+                "Student Deleted Successfully");
+            }
+        }
+        catch(Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+6: menu.html 
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Student Management System</h2>
+
+<form action="menu" method="post">
+
+1 - Add Student<br>
+2 - View Students<br>
+3 - Update Student<br>
+4 - Delete Student<br>
+5 - Logout<br><br>
+
+Enter Choice:
+<input type="text" name="choice">
+
+<br><br>
+
+<input type="submit" value="Go">
+
+</form>
+
+</body>
+</html>
+
+
+7: updatestudent.html:
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Update Student</h2>
+
+<form action="update" method="post">
+
+Student ID:
+<input type="text" name="sid">
+
+<br><br>
+
+Student Name:
+<input type="text" name="sname">
+
+<br><br>
+
+Course:
+<input type="text" name="course">
+
+<br><br>
+
+<input type="submit"
+       value="Update Student">
+
+</form>
+
+</body>
+</html>
+
+8: deletestudent.htnl
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Delete Student</h2>
+
+<form action="delete" method="post">
+
+Student ID:
+<input type="text" name="sid">
+
+<br><br>
+
+<input type="submit"
+       value="Delete Student">
+
+</form>
+
+</body>
+</html>
+
+9. Change LoginServlet
+
+
+if(uname.equals("admin")
+        && pwd.equals("123"))
+{
+    HttpSession session =
+            request.getSession();
+
+    session.setAttribute(
+            "username", uname);
+
+    response.sendRedirect(
+            "menu.html");
+}

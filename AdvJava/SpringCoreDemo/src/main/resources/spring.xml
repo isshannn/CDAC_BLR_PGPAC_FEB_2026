@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans
+xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+xsi:schemaLocation="
+http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Address Object -->
+
+    <bean id="addr"
+          class="com.samvas.Address">
+
+        <constructor-arg value="Bangalore"/>
+        <constructor-arg value="Karnataka"/>
+
+    </bean>
+
+    <!-- Employee Object -->
+
+    <bean id="emp"
+          class="com.samvas.Employee">
+
+        <constructor-arg value="20115"/>
+        <constructor-arg value="Samvas"/>
+
+        <constructor-arg ref="addr"/>
+
+    </bean>
+
+</beans>
