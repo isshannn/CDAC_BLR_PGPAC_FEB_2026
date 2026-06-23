@@ -24,7 +24,9 @@
 				<th>Price</th>
 			</tr>
 
-			<%for(FoodItem menu_obj : menu_items) { %>
+			<%
+				for(FoodItem menu_obj : menu_items) { 	
+			%>
 
 			<tr>
 				<td>
@@ -41,6 +43,8 @@
 				<td>
 					<%= menu_obj.getPrice()%>
 				</td>
+				<td><button>+</button> 0 <button>-</button></td>
+				<td><% %></td>
 			</tr>
 
 			<% } %>

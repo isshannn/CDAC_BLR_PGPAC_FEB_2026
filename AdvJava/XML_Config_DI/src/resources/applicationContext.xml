@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Book Bean -->
+	<bean id="book" class="com.samvas.XML_Config_DI.Book">
+
+		<constructor-arg value="101" />
+		<constructor-arg value="Spring FrameWork" />
+		<constructor-arg value="Rod Johnson" />
+		<constructor-arg value="650.0" />
+
+	</bean>
+
+	<!-- Library Bean -->
+	<bean id="lib" class="com.samvas.XML_Config_DI.Library">
+
+		<constructor-arg value="CDAC Central Library" />
+		<constructor-arg value="Bangalore" />
+		<constructor-arg ref="book" />
+
+	</bean>
+
+</beans>

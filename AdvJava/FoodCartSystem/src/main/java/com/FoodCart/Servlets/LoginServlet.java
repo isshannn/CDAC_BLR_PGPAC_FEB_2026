@@ -12,23 +12,29 @@ import javax.servlet.http.HttpSession;
 import com.FoodCart.dao.LoginDAO;
 import com.FoodCart.util.DBInitializer;
 
-/**
- * Servlet implementation class LoginServlet
+/*
+  	LoginServlet here takes the userInput from login.html and authorizes the login(with help Login DAO class). 
  */
+
+
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
+	
+//	DBInitializer class here perfoms necessary SQL operations for APP functionality. This is called by default when the login happens.
 	@Override
 	public void init() throws ServletException{
 		DBInitializer.createDatabase();
 	}
 
 
+//  Since HTML "POSTs" the servlets "gets"
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
+//		Fetches from HTML page
 		String userName = request.getParameter("username");
 		String passWord = request.getParameter("password");
 

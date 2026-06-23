@@ -8,6 +8,14 @@
 
 <body>
 
+<!-- 
+	Entry Point of the web app, upon submit/Login button hit. The post action "posts" data to the servlet
+	PS: you have to define what action html has to take, like in this case you arre stating
+		1> Upon submit go to LoginServlet
+		2> The nature of submit is post (Take user input data)
+		3> The Login Servlet will process this data and decide accordingly
+ -->
+
 	<div>
 		<form action="LoginServlet" method="POST"
 			style="display: flex; flex-direction: column; align-items: center; gap: 1vh">

@@ -4,7 +4,7 @@ public class FoodItem {
 	private int food_id;
 	private String food_name;
 	private double price;
-
+	
 	public int getFood_id() {
 		return food_id;
 	}

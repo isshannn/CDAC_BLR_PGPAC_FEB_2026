@@ -1,7 +1,5 @@
 package com.samvas;
 
-import com.samvas.Address;
-
 public class Employee {
 	private int empId;
     private String empName;
