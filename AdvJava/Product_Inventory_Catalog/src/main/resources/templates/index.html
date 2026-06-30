@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Warehouse Catalog Portal</title>
+</head>
+<body>
+	
+	<h2>WareHouse Product Inventory Dashboard</h2>
+	<a th:href="@{/products/new}">Add New Product</a>
+	<br/><br/>
+	
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>NAME</th>
+				<th>Category</th>
+				<th>Price</th>
+				<th>Stock</th>
+				<th>Actions</th>		
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="prod : ${products}">
+				<td th:text="${prod.id}">ID</td>
+                <td th:text="${prod.name}">Name</td>
+                <td th:text="${prod.category}">Category</td>
+                <td th:text="${prod.price}">Price</td>
+                <td th:text="${prod.stockQuantity}">Stock</td>
+                <td>
+                	<a th:href="@{/products/edit/{id}(id=${prod.id})}">Edit</a> | 
+                    <a th:href="@{/products/delete/{id}(id=${prod.id})}" 
+                       onclick="return confirm('Are you sure?')">Delete</a>
+                </td>
+			</tr>	
+		</tbody>
+	</table>
+</body>
+</html>
