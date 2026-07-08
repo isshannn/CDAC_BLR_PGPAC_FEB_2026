@@ -1,0 +1,9 @@
+ What is devops?
+
+ DevOps is a combinations of Dev and Operations that represents a set of practices, priciples tools and aimed at improving collaboration between soft dev team and IT ops team. Prim Obj to deliever high quality soft rapidly reliably and continously
+
+
+
+Prod, Dev, QA
+Sprints (waterfall agile)
+

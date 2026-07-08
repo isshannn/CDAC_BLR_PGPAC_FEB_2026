@@ -40,9 +40,10 @@ public class ProductController {
 	
 //	PROCESS CREATE / UPDATE SAVE
 	@PostMapping("/save")
-	public String saveProdcut(@Valid @ModelAttribute("product") Product product_obj, BindingResult result) {
-		if(result.hasErrors())
-			return "product-form";
+//	BindingResult result
+	public String saveProdcut(@Valid @ModelAttribute("product") Product product_obj) {
+//		if(result.hasErrors())
+//			return "product-form";
 		prod_repo.save(product_obj);
 		return "redirect:/products";
 	}
